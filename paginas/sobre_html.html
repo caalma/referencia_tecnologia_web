@@ -254,7 +254,13 @@ textO
             <section id="s_formulario">
                 <h3>Formulario</h3>
 
-                <form action="../extra/formulario_simulacion_receptor.html" method="post" enctype="multipart/form-data"target="respuesta_formulario">
+                <!-- Otro método para enviar datos mediante formularios es el "post". 
+                    Requiere un encabezado especial para enviar archivos desde el formulario.
+                    Los atributos necesarios en form son:
+                        method="post"
+                        enctype="multipart/form-data" 
+                 -->
+                <form action="../extra/formulario_simulacion_receptor.html" method="get" target="respuesta_formulario">
                     <fieldset>
                         <legend>Entradas Lineales</legend>
                         
