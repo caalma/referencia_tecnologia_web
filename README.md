@@ -1,3 +1,3 @@
-# Referencia de tecnologia web 
+# Referencia de tecnología web 
 
-Contenidos guía sobre `HTML`, `CSS` y `Javascript`. 
+Guía sobre `HTML`, `CSS` y `Javascript`. 
