@@ -1,0 +1,578 @@
+<!-- Declaración de tipo de documento -->
+<!DOCTYPE html> 
+
+<!-- Contenedor completo de la página  -->
+<html lang="es-AR">
+
+<!-- Metadatos de la página  -->
+<head>
+
+    <meta charset="utf-8">
+
+    <!-- Especificaciones de compatibilidad con dispositivos.
+         Una lista completa de contenidos para el tag meta puede verse aquí:
+         https://gist.github.com/lancejpollard/1978404
+     -->
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta http-equiv="cleartype" content="on">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="handheldfriendly" content="true">
+
+    <meta name="author" content="nombre del autor <email@delautor.com>">
+    <meta name="description" content="descripcion de la página para los bots">
+    <meta name="robots" content="index,follow">
+    <meta name="keywords" content="HTML,CSS,XML,JavaScript">
+
+    <!-- Este tag recarga la página en la url especificada luego del tiempo de espera indicado, en este caso 3 segundos. 
+    <meta http-equiv="refresh" content="3;url=https://html.spec.whatwg.org/">
+    -->
+
+    <!-- Informaciones de Open Graph: https://ogp.me/ -->
+    <meta property="og:image" content="./img/html.png">
+
+    <!-- Carga de ícono de página -->
+    <link rel="alternate icon" type="image/png" href="./img/favicon.png">
+    
+    <!-- Carga de estilos -->
+    <link rel="stylesheet" type="text/css" href="./css/normalize.css">
+    <link rel="stylesheet" type="text/css" href="./css/estilo.css">
+    
+    <style></style>
+
+    <title>Página ejemplo de tags HTML5</title>
+
+</head>
+
+<!-- Contenido visible de la página -->
+<body>
+    <div class="contenido">
+        <a id="inicio"></a>
+        <header>
+            <h1>Página ejemplo de tags HTML5</h1>
+            <nav id="menu_general">
+                <ul>
+                    <li><a href="#s_encabezados">Encabezados</a></li>
+                    <li><a href="#s_parrafo">Parrafo</a></li>
+                    <li><a href="#s_separadores">Separadores</a></li>
+                    <li><a href="#s_modificadores">Modificadores</a></li>
+                    <li><a href="#s_bloques_semanticos">Bloques semánticos</a></li>
+                    <li><a href="#s_tabla">Tabla</a></li>
+                    <li><a href="#s_formulario">Formulario</a></li>
+                    <li><a href="#s_incorporaciones">Incorporaciones</a></li>
+                    <li><a href="#s_imagenes">Imágenes</a></li>
+                    <li><a href="#s_audio_y_video">Audio y video</a></li>
+                    <li><a href="#s_tutoriales">Tutoriales</a></li>
+                    <li><a href="#s_complementos">Complementos</a></li>
+                </ul>
+            </nav> 
+        </header>
+        <article>
+            <main>
+                
+                <section id="s_encabezados">
+                    <h1>Encabezado nivel 1</h1>
+                    <h2>Encabezado nivel 2</h2>
+                    <h3>Encabezado nivel 3</h3>
+                    <h4>Encabezado nivel 4</h4>
+                    <h5>Encabezado nivel 5</h5>
+                    <h6>Encabezado nivel 6</h6>
+                </section>
+
+                <section id="s_interactivos">
+                    <div>
+                        <h4>Enlaces</h4>
+                        <ul>
+                            <li><a href="https://www.wikipedia.org/" target="_blank">Wikipedia</a></li>
+                            <li><a href="tel:+549154123456" target="_blank">Celular 154 123456</a></li>        
+                            <li><a href="mailto:email@propio.ar" target="_blank">email@propio.ar</a></li>
+                        </ul>
+                    </div>
+                
+                    <div>
+                        <h4>Imagen con enlaces sectorizados</h4>
+                        <img style="display: block;" src="./img/imagen_para_menu.svg" usemap="#mapa_enlaces">
+                        <map name="mapa_enlaces">
+                          <area shape="rect" coords="18,17,86,62" alt="jpg" href="https://duckduckgo.com/?q=!wiki jpg" target="_blank">
+                          <area shape="rect" coords="105,23,184,57" alt="png" href="https://duckduckgo.com/?q=!wiki png" target="_blank">
+                          <area shape="circle" coords="97,102,38" alt="svg" href="https://duckduckgo.com/?q=!wiki svg" target="_blank">
+                          <area shape="rect" coords="11,146,119,183" alt="webp" href="https://duckduckgo.com/?q=!wiki webp" target="_blank">
+                          <area shape="rect" coords="131,126,189,184" alt="gif" href="https://duckduckgo.com/?q=!wiki gif" target="_blank">
+                        </map>
+                        <!-- https://developer.mozilla.org/en-US/docs/Web/HTML/Element/area -->
+                    </div>
+                </section>
+
+                <section id="s_parrafo">
+                    <h3>Párrafo</h3>
+                    
+                    <p>Básicamente esto es un párrafo de texto. Se muestra en modo bloque pero puede modificarse desde css. Dentro de este elemento pueden anidarse otros tags, por ejemplo: los <strong>modificadores</strong>, o los <a href="#">enlaces</a>.</p>
+                </section>
+
+            </main>
+            
+            <section id="s_separadores">
+                <h3>Separadores y divisores</h3>
+
+                <p>
+                    Uno Dos Tres <br> Cuatro Cinco Seis <br> Siete Ocho Nueve
+                </p>
+
+                <hr>
+
+                <p>
+                    Palabra<wbr>Muy<wbr>Larga<wbr>Que<wbr>Será<wbr>Cortado<wbr>En<wbr>Algún<wbr>Momento<wbr>Cuando<wbr>No<wbr>Alcanze<wbr>Más<wbr>El<wbr>Espacio<wbr>Horizontal.
+                    <br>
+                    PalabraMuyLargaQue_NO_SeráCortadoEnAlgúnMomentoCuandoNoAlcanzeMásElEspacioHorizontal.
+                </p>
+            </section>
+
+            <section id="s_modificadores">
+                <h3>Modificadores de texto</h3>
+                
+                <p>Colores: <span class="resaltado rojo">rojo</span>, <span class="resaltado verde">verde</span>, <span class="resaltado azul">azul</span>.</p>    
+                
+                <p>Texto :
+                    <br><em>enfatisado</em>, 
+                    <strong>destacado</strong>,
+                    <b>pesado</b>,
+                    <i>italico</i>,
+                    <small>pequeño</small>,
+                    sub<sub>índice</sub>,
+                    super<sup>índice</sup>,
+                    <q>encomillado</q>,
+                    <u>uuuu</u>,
+                    <s>tachado</s>,
+                    <del>borrado</del>,
+                    <ins>insertado</ins> .
+                </p>
+            </section>
+
+            <section id="s_bloques_semanticos">
+                <h3>Bloques semánticos</h3>
+
+                <blockquote>
+                    Texto tExto teXto texTo textO
+                </blockquote>
+
+                <pre>
+Texto
+tExto
+teXto
+texTo
+textO
+                </pre>
+
+                <code>
+                    Texto tExto teXto texTo textO
+                </code>
+
+                <p>Texto de <samp>Prueba</samp>.</p>
+
+                <p><abbr title="Hyper Text Markup Language">HTML</abbr></p>
+
+                <details>
+                    <summary>Nota</summary>
+                    <p>Contenido extra.</p>
+                </details>
+                
+                <dl>
+                    <dt>Concepto</dt>
+                    <dd>Explicación o descripción del concepto.</dd>
+                </dl>
+
+                <p><dfn>Definición</dfn>: Detalle aclaratorio.</p>
+                
+                <p>El siguinte contenido es una: <cite>cita</cite>.</p>
+
+                <p>En matemáticas, <var>x</var> es una variable muy común.</p>
+
+                <p>
+                    <address><b>Domicilio Xyz N° 123.</b> Código Postal: 00001. Ciudad. Provincia. País.</address>
+                </p>
+
+                <!-- 
+                    Tags aún no documentados
+
+                    <data>data???</data>
+                    <bdi>bdi???</bdi>
+                    <bdo>bdo???</bdo>
+                    <time>time???</time>
+                    <dialog>dialog???</dialog>
+                    <mark>mark???</mark>
+                    <ruby>
+                        <rp>rp???</rp>
+                        <rt>rt???</rt>
+                    </ruby>
+                -->
+            </section>
+
+            <section id="s_tabla">
+                <h3>Tabla</h3>
+
+                <table>
+                    <colgroup>
+                        <col>
+                    </colgroup>
+                    <caption>Título de la tabla bidimensional</caption>    
+                    <thead>
+                        <tr>
+                            <th>Cabecera A</th>
+                            <th>Cabecera B</th>
+                            <th>Cabecera C</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>1</td>
+                            <td>2</td>
+                            <td>3</td>
+                        </tr>
+                        <tr>
+                            <td>x</td>
+                            <td>y</td>
+                            <td>z</td>
+                        </tr>
+                    </tbody>
+                    <tfoot>
+                        <tr>
+                            <td>Pie A</td>
+                            <td>Pie B</td>
+                            <td>Pie C</td>
+                        </tr> 
+                    </tfoot>
+                </table>
+
+            </section>
+
+
+            <section id="s_formulario">
+                <h3>Formulario</h3>
+
+                <form action="./extra/formulario_simulacion_receptor.html" method="post" enctype="multipart/form-data"target="respuesta_formulario">
+                    <fieldset>
+                        <legend>Entradas Lineales</legend>
+                        
+                        <div>
+                            <label for="texto">Texto</label>
+                            <input type="text" name="texto">     
+                        </div>
+                        <div>
+                            <label for="texto_con_opciones">Texto con opciones</label>
+                            <input type="text" name="texto_con_opciones" list="lista_navegadores" placeholder="Un navegador ...">     
+                            <datalist id="lista_navegadores">
+                                  <option value="Firefox">
+                                  <option value="Chrome">
+                                  <option value="Brave">
+                                  <option value="Opera">
+                                  <option value="Safari">
+                                  <option value="Edge">
+                            </datalist>
+                        </div>
+                        <div>
+                            <label for="numero">Númérico</label>
+                            <input type="number" name="numero">     
+                        </div>
+                        <div>
+                            <label for="rango_numerico">Rango numérico</label>
+                            <input type="range" name="rango_numerico" min="0" max="10">     
+                        </div>
+                        <div>
+                            <label for="email" required>Email</label>
+                            <input type="email" name="email">     
+                        </div>
+                        <div>
+                            <label for="telcel" required>Telefono/Celular</label>
+                            <input type="tel" name="telcel">     
+                        </div>
+                        <div>
+                            <label for="url" required>URL</label>
+                            <input type="url" name="url">     
+                        </div>
+                        <div>
+                            <label for="texto_deshabilitado">Deshabilitado</label>
+                            <input type="text" name="texto_deshabilitado" value="No modificable" disabled>     
+                        </div>
+                        <div>
+                            <label for="color">Color</label>
+                            <input type="color" name="color" value="#88ff22">     
+                        </div>
+                        <div>
+                            <label for="fecha">Fecha</label>
+                            <input type="date" name="fecha">     
+                        </div>
+                        <div>
+                            <label for="fecha_local">Fecha</label>
+                            <input type="datetime-local" name="fecha_local">     
+                        </div>
+                        <div>
+                            <label for="mes">Mes</label>
+                            <input type="month" name="mes">     
+                        </div>
+                        <div>
+                            <label for="semana">Semana</label>
+                            <input type="week" name="semana">     
+                        </div>
+                        <div>
+                            <label for="hora">Hora</label>
+                            <input type="time" name="hora">     
+                        </div>
+                        <div>
+                            <label for="clave">Clave Privada</label>
+                            <input type="password" name="clave">     
+                        </div>
+                        <div>
+                            <label for="busqueda">Búsqueda</label>
+                            <input type="search" name="busqueda">     
+                        </div>
+                    </fieldset>
+
+                    <fieldset>
+                        <legend>Otras entradas</legend>
+
+                        <div>
+                            <input type="checkbox" name="tilde" value="elegido" checked>     
+                            <label for="tilde">Tilde (Si/No)</label>
+                        </div>
+                        <div>
+                            <label for="invisible">Oculto</label>
+                            <input type="hidden" name="invisible">     
+                        </div>
+                        <div>
+                            <label for="imagen">Imagen</label>
+                            <input type="image" name="imagen" src="./img/favicon.png" width="20px" value="Imagen">
+                            <small>Funciona como un botón.</small>
+                        </div>
+                        <div>
+                            <label for="boton">Botón</label>
+                            <input type="button" name="boton" value="Botón">
+                            <small>Funciona como un botón.</small>
+                        </div>
+                        <div>
+                            <label for="archivo">Archivo</label>
+                            <input type="file" name="archivo">     
+                        </div>
+                    </fieldset>
+
+                    <fieldset>
+                        <legend>Entrada multilinea</legend>
+
+                        <div>
+                            <label for="texto_multilinea">Texto multilínea.</label>
+                            <textarea name="texto_multilinea" placeholder="Escribe algo ..."></textarea>
+                        </div>
+                    </fieldset>
+
+                    <fieldset>
+                        <legend>Selectores</legend>
+
+                        <div>
+                            <label for="selector_lista_simple">Tipo Lista Simple</label>
+                            <select name="selector_lista_simple">
+                                <option value="">- elige una opción -</option>
+                                <optgroup>
+                                    <option value="1">Uno</option>
+                                    <option value="2">Dos</option>
+                                    <option value="3">Tres</option>
+                                </optgroup>
+                                <optgroup>
+                                    <option value="a">Letra A</option>
+                                    <option value="b">Letra B</option>
+                                    <option value="c">Letra C</option>
+                                </optgroup>
+                            </select>
+                        </div>
+                        <div>
+                            <label for="selector_lista_multiple">Tipo Lista Múltiple</label>
+                            <select name="selector_lista_multiple" multiple>
+                                    <option value="f00">rojo</option>
+                                    <option value="ff0">amarillo</option>
+                                    <option value="0f0">verde</option>
+                                    <option value="0ff">cian</option>
+                                    <option value="00f">azul</option>
+                                    <option value="f0f">magenta</option>
+                            </select>
+                        </div>
+                        <div>
+                            <label for="selector_radio">Tipo Botón</label>
+                            <span>
+                                <input type="radio" name="selector_radio" value="a"> A
+                            </span>
+                            <span>
+                                <input type="radio" name="selector_radio" value="b" checked> B
+                            </span>
+                            <span>
+                                <input type="radio" name="selector_radio" value="c"> C
+                            </span>
+                        </div>
+                    </fieldset>
+
+                    <fieldset>
+                        <legend>Campos de control</legend>                        
+
+                        <div>
+                            <label for="progreso">Control de avance</label>
+                            <progress id="progreso" name="avance" value="32" max="100">32%</progress>
+                        </div>
+                        <div>
+                            <label for="nivel">Control de nivel</label>
+                            <meter id="nivel" name="nivel" value="2" min="0" max="10">2/10</meter>
+                        </div>
+                    </fieldset>
+                    <hr>
+                    <div>
+                        <button type="reset">Limpiar</button>
+                        <button type="submit">Enviar</button>
+                    </div>    
+                </form>
+                <div>
+                    <p>Contenido externo, respuesta del formulario.</p>
+                    <iframe name="respuesta_formulario"></iframe>
+                </div>
+
+                <div>
+                    <h3>Ejemplo de campos de salida de información</h3>
+                    <form oninput="x.value=parseInt(a.value)+parseInt(b.value)">
+                      <input type="range" id="a" value="50">
+                      +<input type="number" id="b" value="25">
+                      =<output name="x" for="a b"></output>
+                    </form>
+                </div>
+            </section>
+
+
+            <section id="s_imagenes">
+                <h3>Imágenes</h3>
+
+                <div>
+                    <img src="./img/html.png" alt="descripción de la imagen">
+                </div>
+
+                <div>
+                    <figure>
+                        <img src="./img/html.png" alt="descripción de la imagen">
+                        <figcaption>pie de imagen</figcaption>
+                    </figure>
+                </div>
+
+                <div>
+                    <center>
+                        <picture>
+                          <source media="(min-width:900px)" srcset="./img/pic1.png">
+                          <source media="(min-width:600px)" srcset="./img/pic2.png">
+                          <source media="(min-width:300px)" srcset="./img/pic3.png">
+                          <img>
+                        </picture>
+                    </center>
+                </div>
+
+                <div>
+                    <canvas id="imagen_canvas" width="200" height="200"></canvas>
+                </div>
+                
+                <div>
+                    <object type="image/svg+xml" data="./img/favicon.svg">
+                        <img src="./img/favicon.svg">
+                    </object>
+                </div>
+
+                <div>
+                    <svg width="100" height="100">
+                      <circle cx="50" cy="50" r="40" stroke="green" stroke-width="4" fill="yellow">
+                    </svg>
+                </div>
+            </section>
+
+            <section id="s_audio_y_video">
+                <h3>Audio y Video</h3>
+
+                <div>
+                    <audio controls>
+                        <source src="./audio-video/ejemplo.mp3" type="audio/mp3">
+                        <source src="./audio-video/ejemplo.ogg" type="audio/ogg">
+                    </audio>
+                </div>
+                <div>
+                    <video width="320" height="240" controls>
+                        <source src="./audio-video/ejemplo.mp4" type="video/mp4">
+                        <track>
+                    </video>
+                </div>
+            </section>
+
+            <section id="s_incorporaciones">
+                <h3>Incorporaciones externas</h3>
+
+                <div>
+                    <h3>Embebidos</h3>
+                    <br><embed type="image/jpg" src="./img/html.svg" width="100">
+                        <small>Se recomienda utilizar el tag <code>img</code>.</small>
+                    <br><embed type="text/html" src="./extra/contenido_extra.html">
+                        <small>Se recomienda utilizar el tag <code>iframe</code>.</small>
+                </div>
+                <div>
+                    <h3>Objetos</h3>
+                    <br><object data="./img/html.svg" width="100"></object>
+                        <small>Se recomienda utilizar el tag <code>img</code>.</small>
+                    <br><object data="./extra/contenido_extra.html"></object>
+                        <small>Se recomienda utilizar el tag <code>iframe</code>.</small>
+
+                </div>
+            </section>
+
+        </article>
+
+
+        <aside>
+            <h2>Contenido Lateral <small>(secundario)</small></h2>
+
+            <section id="s_tutoriales">
+                <h3>Algunos tutoriales</h3>
+                <ul>
+                    <li><a href="https://developer.mozilla.org/es/docs/Web/" target="_blank">Developer Mozilla</a> <small>(español)</small></li>
+                    <li><a href="https://www.htmlquick.com/es/" target="_blank">HTML Quick</a> <small>(español)</small></li>
+                    <li><a href="https://way2tutorial.com/" target="_blank">way2Tutorial</a> <small>(inglés)</small></li>
+                    <li><a href="https://www.w3schools.com/" target="_blank">w3Schools</a> <small>(inglés)</small></li>
+                </ul>                
+            </section>
+
+            <section id="s_complementos">
+                <h3>Recurso complementarios</h3>
+                <ol>
+                    <li><a href="https://fonts.google.com/" target="_blank">Tipografías <b>(Google)</b></a></li>
+                    <li><a href="https://fontsquirrel.com/" target="_blank">Tipografías <b>(FontSquirrel)</b></a></li>
+                    <li><a href="https://fontawesome.com/" target="_blank">Íconos tipográficos <b>(FontAwesome)</b></a></li>
+                    <li><a href="https://color-hex.com/" target="_blank">Color Hexadecimal</a></li>
+                    <li><a href="https://pixlr.com/es/" target="_blank">Editor de imágenes bitmap <b>(Pixlr)</b> <small>ONLINE</small></a></li>
+                    <li><a href="https://gimp.org/" target="_blank">Editor de imágenes bitmap <b>(Gimp)</b></a></li>
+                    <li><a href="https://inkscape.org/" target="_blank">Editor de imágenes vectoriales <b>(Inkscape)</b></a></li>
+                    <li><a href="https://github.com/" target="_blank">Alojamiento de código <b>(GitHub)</b></a></li>
+                    <li><a href="https://gitlab.com/" target="_blank">Alojamiento de código <b>(GitLab)</b></a></li>
+                </ol>
+            </section>
+        </aside>
+
+        <footer>
+            <nav>
+                <a href="/">ir a la portada</a>
+                ·
+                <a href="#inicio">ir al inicio</a>
+            </nav>
+        </footer>
+
+    </div>
+
+
+    <script type="text/javascript" src="./js/jquery-3.6.0.min.js"></script>
+    <script type="text/javascript" src="./js/init.js"></script>
+    
+    <noscript>
+        Este navegador no soporta Javascript o está desactivado.
+    </noscript>
+
+    <template>
+        <h1>Plantilla</h1>
+        <p>Información genérica.</p>
+    </template>
+
+</body>
+</html>
