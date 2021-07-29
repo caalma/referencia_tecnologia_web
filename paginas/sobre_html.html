@@ -28,14 +28,15 @@
     -->
 
     <!-- Informaciones de Open Graph: https://ogp.me/ -->
-    <meta property="og:image" content="./img/html.png">
+    <meta property="og:title" content="Referencia de Tecnología Web: HTML">
+    <meta property="og:image" content="../img/html.png">
 
     <!-- Carga de ícono de página -->
-    <link rel="alternate icon" type="image/png" href="./img/favicon.png">
+    <link rel="alternate icon" type="image/png" href="../img/favicon.png">
     
     <!-- Carga de estilos -->
-    <link rel="stylesheet" type="text/css" href="./css/normalize.css">
-    <link rel="stylesheet" type="text/css" href="./css/estilo.css">
+    <link rel="stylesheet" type="text/css" href="../css/normalize.css">
+    <link rel="stylesheet" type="text/css" href="../css/estilo.css">
     
     <style></style>
 
@@ -49,6 +50,11 @@
         <a id="inicio"></a>
         <header>
             <h1>Página ejemplo de tags HTML5</h1>
+
+            <blockquote>
+                El código de esta página contiene comentarios técnicos y referencias.
+            </blockquote>
+
             <nav id="menu_general">
                 <ul>
                     <li><a href="#s_encabezados">Encabezados</a></li>
@@ -90,7 +96,7 @@
                 
                     <div>
                         <h4>Imagen con enlaces sectorizados</h4>
-                        <img style="display: block;" src="./img/imagen_para_menu.svg" usemap="#mapa_enlaces">
+                        <img style="display: block;" src="../img/imagen_para_menu.svg" usemap="#mapa_enlaces">
                         <map name="mapa_enlaces">
                           <area shape="rect" coords="18,17,86,62" alt="jpg" href="https://duckduckgo.com/?q=!wiki jpg" target="_blank">
                           <area shape="rect" coords="105,23,184,57" alt="png" href="https://duckduckgo.com/?q=!wiki png" target="_blank">
@@ -248,7 +254,7 @@ textO
             <section id="s_formulario">
                 <h3>Formulario</h3>
 
-                <form action="./extra/formulario_simulacion_receptor.html" method="post" enctype="multipart/form-data"target="respuesta_formulario">
+                <form action="../extra/formulario_simulacion_receptor.html" method="post" enctype="multipart/form-data"target="respuesta_formulario">
                     <fieldset>
                         <legend>Entradas Lineales</legend>
                         
@@ -339,7 +345,7 @@ textO
                         </div>
                         <div>
                             <label for="imagen">Imagen</label>
-                            <input type="image" name="imagen" src="./img/favicon.png" width="20px" value="Imagen">
+                            <input type="image" name="imagen" src="../img/favicon.png" width="20px" value="Imagen">
                             <small>Funciona como un botón.</small>
                         </div>
                         <div>
@@ -444,12 +450,12 @@ textO
                 <h3>Imágenes</h3>
 
                 <div>
-                    <img src="./img/html.png" alt="descripción de la imagen">
+                    <img src="../img/html.png" alt="descripción de la imagen">
                 </div>
 
                 <div>
                     <figure>
-                        <img src="./img/html.png" alt="descripción de la imagen">
+                        <img src="../img/html.png" alt="descripción de la imagen">
                         <figcaption>pie de imagen</figcaption>
                     </figure>
                 </div>
@@ -457,9 +463,9 @@ textO
                 <div>
                     <center>
                         <picture>
-                          <source media="(min-width:900px)" srcset="./img/pic1.png">
-                          <source media="(min-width:600px)" srcset="./img/pic2.png">
-                          <source media="(min-width:300px)" srcset="./img/pic3.png">
+                          <source media="(min-width:900px)" srcset="../img/pic1.png">
+                          <source media="(min-width:600px)" srcset="../img/pic2.png">
+                          <source media="(min-width:300px)" srcset="../img/pic3.png">
                           <img>
                         </picture>
                     </center>
@@ -470,8 +476,8 @@ textO
                 </div>
                 
                 <div>
-                    <object type="image/svg+xml" data="./img/favicon.svg">
-                        <img src="./img/favicon.svg">
+                    <object type="image/svg+xml" data="../img/favicon.svg">
+                        <img src="../img/favicon.svg">
                     </object>
                 </div>
 
@@ -504,16 +510,16 @@ textO
 
                 <div>
                     <h3>Embebidos</h3>
-                    <br><embed type="image/jpg" src="./img/html.svg" width="100">
+                    <br><embed type="image/jpg" src="../img/html.svg" width="100">
                         <small>Se recomienda utilizar el tag <code>img</code>.</small>
-                    <br><embed type="text/html" src="./extra/contenido_extra.html">
+                    <br><embed type="text/html" src="../extra/contenido_extra.html">
                         <small>Se recomienda utilizar el tag <code>iframe</code>.</small>
                 </div>
                 <div>
                     <h3>Objetos</h3>
-                    <br><object data="./img/html.svg" width="100"></object>
+                    <br><object data="../img/html.svg" width="100"></object>
                         <small>Se recomienda utilizar el tag <code>img</code>.</small>
-                    <br><object data="./extra/contenido_extra.html"></object>
+                    <br><object data="../extra/contenido_extra.html"></object>
                         <small>Se recomienda utilizar el tag <code>iframe</code>.</small>
 
                 </div>
@@ -562,13 +568,19 @@ textO
     </div>
 
 
-    <script type="text/javascript" src="./js/jquery-3.6.0.min.js"></script>
-    <script type="text/javascript" src="./js/init.js"></script>
+    <!-- Las librerias Javascript se cargan al final del body 
+         para mejorar la performance de la página -->
+    <script type="text/javascript" src="../js/jquery-3.6.0.min.js"></script>
+    <script type="text/javascript" src="../js/init.js"></script>
     
+
+    <!-- Si el navegador no soporta o tiene deshabilitado Javascript 
+         se mostrará el contenido que tenga el tag noscript -->
     <noscript>
         Este navegador no soporta Javascript o está desactivado.
     </noscript>
 
+    <!-- Este contenido solamente sirve para utilizarlo desde Javascript -->
     <template>
         <h1>Plantilla</h1>
         <p>Información genérica.</p>
