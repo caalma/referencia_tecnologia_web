@@ -60,6 +60,7 @@
         https://russmaxdesign.github.io/accessible-forms/index.html
         https://www.w3.org/TR/html-aria/
         https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA
+        https://developer.mozilla.org/es/docs/Web/Accessibility/ARIA
         https://www.codeinwp.com/blog/wai-aria-roles/
         -->
     <div class="contenido">
@@ -367,6 +368,15 @@ textO
                     </fieldset>
 
                     <fieldset>
+                        <legend>Entrada multilinea</legend>
+
+                        <div>
+                            <label for="texto_multilinea">Texto multilínea</label>
+                            <textarea name="texto_multilinea" id="texto_multilinea" placeholder="Escribe algo ..."></textarea>
+                        </div>
+                    </fieldset>
+                    
+                    <fieldset>
                         <legend>Tilde / Oculto / Archivo</legend>
 
                         <div>
@@ -381,6 +391,12 @@ textO
                         <div>
                             <label class="visually-hidden">Nombre no visible</label>
                             <input type="text" name="texto_sin_nombre" placeholder="Sin nombre" aria-label="Sin nombre">
+                        </div>
+                        <div>
+                            <!-- Referencia sobre certificación 
+                                https://developer.mozilla.org/es/docs/Web/HTML/Element/keygen 
+                            -->
+                            <keygen name="control_certificado" challenge="clavePublica" keytype="RSA">
                         </div>
                         <div>
                             <label for="archivo">Archivo (único)</label>
@@ -404,15 +420,6 @@ textO
                             <label for="boton">Botón</label>
                             <input type="button" name="boton" id="boton" value="Botón">
                             <small>Funciona como un botón.</small>
-                        </div>
-                    </fieldset>
-
-                    <fieldset>
-                        <legend>Entrada multilinea</legend>
-
-                        <div>
-                            <label for="texto_multilinea">Texto multilínea.</label>
-                            <textarea name="texto_multilinea" id="texto_multilinea" placeholder="Escribe algo ..."></textarea>
                         </div>
                     </fieldset>
 
