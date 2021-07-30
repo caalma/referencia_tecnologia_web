@@ -56,6 +56,12 @@
 
 <!-- Contenido visible de la página -->
 <body>
+    <!-- Referencias sobre accesibilidad:
+        https://russmaxdesign.github.io/accessible-forms/index.html
+        https://www.w3.org/TR/html-aria/
+        https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA
+        https://www.codeinwp.com/blog/wai-aria-roles/
+        -->
     <div class="contenido">
         <a id="inicio"></a>
         <header>
@@ -271,16 +277,27 @@ textO
                         enctype="multipart/form-data" 
                  -->
                 <form action="../extra/formulario_simulacion_receptor.html" method="get" target="respuesta_formulario">
+                    <!-- Referencias construcción de formularios:
+                        https://www.w3.org/WAI/tutorials/forms/
+                        https://www.w3.org/WAI/WCAG21/Techniques/html/H44.html
+                    -->
                     <fieldset>
                         <legend>Entradas Lineales</legend>
                         
                         <div>
+                            <!-- La para vincular explícitamente el label con el campo relacionado
+                                es necesario agregar al campo el atributo 'id' con el mismo valor
+                                que el 'for' del tag label 
+                                Referencias sobre label:
+                                    https://www.w3.org/WAI/tutorials/forms/labels/
+                                    https://css-tricks.com/html-inputs-and-labels-a-love-story/
+                            -->
                             <label for="texto">Texto</label>
-                            <input type="text" name="texto">     
+                            <input type="text" name="texto" id="texto">     
                         </div>
                         <div>
                             <label for="texto_con_opciones">Texto con opciones</label>
-                            <input type="text" name="texto_con_opciones" list="lista_navegadores" placeholder="Un navegador ...">     
+                            <input type="text" name="texto_con_opciones" id="texto_con_opciones" list="lista_navegadores" placeholder="Un navegador ...">     
                             <datalist id="lista_navegadores">
                                   <option value="Firefox">
                                   <option value="Chrome">
@@ -292,86 +309,101 @@ textO
                         </div>
                         <div>
                             <label for="numero">Númérico</label>
-                            <input type="number" name="numero">     
+                            <input type="number" name="numero" id="numero">     
                         </div>
                         <div>
                             <label for="rango_numerico">Rango numérico</label>
-                            <input type="range" name="rango_numerico" min="0" max="10">     
+                            <input type="range" name="rango_numerico" id="rango_numerico" min="0" max="10">     
                         </div>
                         <div>
                             <label for="email" required>Email</label>
-                            <input type="email" name="email">     
+                            <input type="email" name="email" id="email">     
                         </div>
                         <div>
                             <label for="telcel" required>Telefono/Celular</label>
-                            <input type="tel" name="telcel">     
+                            <span id="telcel-formato">(+54 NúmeroPaís NúmeroZonal NúmeroPersonal)</span>
+                            <input type="tel" name="telcel" id="telcel" aria-describedby="telcel-formato">     
                         </div>
                         <div>
                             <label for="url" required>URL</label>
-                            <input type="url" name="url">     
+                            <input type="url" name="url" id="url">     
                         </div>
                         <div>
                             <label for="texto_deshabilitado">Deshabilitado</label>
-                            <input type="text" name="texto_deshabilitado" value="No modificable" disabled>     
+                            <input type="text" name="texto_deshabilitado" id="texto_deshabilitado" value="No modificable" disabled>     
                         </div>
                         <div>
                             <label for="color">Color</label>
-                            <input type="color" name="color" value="#88ff22">     
+                            <input type="color" name="color" id="color" value="#88ff22">     
                         </div>
                         <div>
                             <label for="fecha">Fecha</label>
-                            <input type="date" name="fecha">     
+                            <input type="date" name="fecha" id="fecha">     
                         </div>
                         <div>
                             <label for="fecha_local">Fecha</label>
-                            <input type="datetime-local" name="fecha_local">     
+                            <input type="datetime-local" name="fecha_local" id="fecha_local">     
                         </div>
                         <div>
                             <label for="mes">Mes</label>
-                            <input type="month" name="mes">     
+                            <input type="month" name="mes" id="mes">     
                         </div>
                         <div>
                             <label for="semana">Semana</label>
-                            <input type="week" name="semana">     
+                            <input type="week" name="semana" id="semana">     
                         </div>
                         <div>
                             <label for="hora">Hora</label>
-                            <input type="time" name="hora">     
+                            <input type="time" name="hora" id="hora">     
                         </div>
                         <div>
                             <label for="clave">Clave Privada</label>
-                            <input type="password" name="clave">     
+                            <input type="password" name="clave" id="clave">     
                         </div>
                         <div>
                             <label for="busqueda">Búsqueda</label>
-                            <input type="search" name="busqueda">     
+                            <input type="search" name="busqueda" id="busqueda">     
                         </div>
                     </fieldset>
 
                     <fieldset>
-                        <legend>Otras entradas</legend>
+                        <legend>Tilde / Oculto / Archivo</legend>
 
                         <div>
-                            <input type="checkbox" name="tilde" value="elegido" checked>     
-                            <label for="tilde">Tilde (Si/No)</label>
+                            <span>Tilde</span>
+                            <input type="checkbox" name="tilde" id="tilde" value="elegido" checked>     
+                            <label for="tilde">(Si/No)</label>
                         </div>
                         <div>
-                            <label for="invisible">Oculto</label>
-                            <input type="hidden" name="invisible">     
+                            <label>Oculto</label>
+                            ( <input type="hidden" name="invisible"> )
                         </div>
+                        <div>
+                            <label class="visually-hidden">Nombre no visible</label>
+                            <input type="text" name="texto_sin_nombre" placeholder="Sin nombre" aria-label="Sin nombre">
+                        </div>
+                        <div>
+                            <label for="archivo">Archivo (único)</label>
+                            <input type="file" name="archivo" id="archivo">     
+                        </div>
+                        <div>
+                            <label for="archivos">Archivos (varios)</label>
+                            <input type="file" name="archivos" id="archivos" multiple>     
+                        </div>
+                    </fieldset>
+
+                    <fieldset>
+                        <legend>Botones</legend>
+                        
                         <div>
                             <label for="imagen">Imagen</label>
-                            <input type="image" name="imagen" src="../img/favicon.png" width="20px" value="Imagen">
+                            <input type="image" name="imagen" id="imagen" src="../img/favicon.png" width="20px" value="Imagen">
                             <small>Funciona como un botón.</small>
                         </div>
                         <div>
                             <label for="boton">Botón</label>
-                            <input type="button" name="boton" value="Botón">
+                            <input type="button" name="boton" id="boton" value="Botón">
                             <small>Funciona como un botón.</small>
-                        </div>
-                        <div>
-                            <label for="archivo">Archivo</label>
-                            <input type="file" name="archivo">     
                         </div>
                     </fieldset>
 
@@ -380,7 +412,7 @@ textO
 
                         <div>
                             <label for="texto_multilinea">Texto multilínea.</label>
-                            <textarea name="texto_multilinea" placeholder="Escribe algo ..."></textarea>
+                            <textarea name="texto_multilinea" id="texto_multilinea" placeholder="Escribe algo ..."></textarea>
                         </div>
                     </fieldset>
 
@@ -388,8 +420,8 @@ textO
                         <legend>Selectores</legend>
 
                         <div>
-                            <label for="selector_lista_simple">Tipo Lista Simple</label>
-                            <select name="selector_lista_simple">
+                            <label for="selector_lista_simple">Lista Simple</label>
+                            <select name="selector_lista_simple" id="selector_lista_simple">
                                 <option value="">- elige una opción -</option>
                                 <optgroup>
                                     <option value="1">Uno</option>
@@ -404,8 +436,8 @@ textO
                             </select>
                         </div>
                         <div>
-                            <label for="selector_lista_multiple">Tipo Lista Múltiple</label>
-                            <select name="selector_lista_multiple" multiple>
+                            <label for="selector_lista_multiple">Lista Múltiple</label>
+                            <select name="selector_lista_multiple" id="selector_lista_multiple" multiple>
                                     <option value="f00">rojo</option>
                                     <option value="ff0">amarillo</option>
                                     <option value="0f0">verde</option>
@@ -415,15 +447,18 @@ textO
                             </select>
                         </div>
                         <div>
-                            <label for="selector_radio">Tipo Botón</label>
+                            <span>Lista Botón</span>
                             <span>
-                                <input type="radio" name="selector_radio" value="a"> A
+                                <input type="radio" name="selector_radio" id="selector_radio_a" value="a"> 
+                                <label for="selector_radio_a">A</label>
                             </span>
                             <span>
-                                <input type="radio" name="selector_radio" value="b" checked> B
+                                <input type="radio" name="selector_radio" id="selector_radio_b" value="b" checked>
+                                <label for="selector_radio_b">B</label>
                             </span>
                             <span>
-                                <input type="radio" name="selector_radio" value="c"> C
+                                <input type="radio" name="selector_radio" id="selector_radio_c" value="c">
+                                <label for="selector_radio_c">C</label>
                             </span>
                         </div>
                     </fieldset>
@@ -433,17 +468,17 @@ textO
 
                         <div>
                             <label for="progreso">Control de avance</label>
-                            <progress id="progreso" name="avance" value="32" max="100">32%</progress>
+                            <progress id="progreso" name="avance" id="avance" value="32" max="100">32%</progress>
                         </div>
                         <div>
                             <label for="nivel">Control de nivel</label>
-                            <meter id="nivel" name="nivel" value="2" min="0" max="10">2/10</meter>
+                            <meter id="nivel" name="nivel" id="nivel" value="2" min="0" max="10">2/10</meter>
                         </div>
                     </fieldset>
                     <hr>
                     <div>
-                        <button type="reset">Limpiar</button>
-                        <button type="submit">Enviar</button>
+                        <input type="reset" value="Limpiar">
+                        <input type="submit" value="Enviar">
                     </div>    
                 </form>
                 <div>
@@ -452,7 +487,7 @@ textO
                 </div>
 
                 <div>
-                    <h3>Ejemplo de campos de salida de información</h3>
+                    <h3>Ejemplo de campos de salida de información (output).</h3>
                     <form oninput="x.value=parseInt(a.value)+parseInt(b.value)">
                       <input type="range" id="a" value="50">
                       +<input type="number" id="b" value="25">
@@ -471,23 +506,26 @@ textO
 
                 <div>
                     <figure>
+                        <figcaption>Título de imagen</figcaption>
                         <img src="../img/html.png" alt="descripción de la imagen">
-                        <figcaption>pie de imagen</figcaption>
                     </figure>
                 </div>
 
                 <div>
-                    <center>
-                        <picture>
-                          <source media="(min-width:900px)" srcset="../img/pic1.png">
-                          <source media="(min-width:600px)" srcset="../img/pic2.png">
-                          <source media="(min-width:300px)" srcset="../img/pic3.png">
-                          <img>
-                        </picture>
-                    </center>
+                    <!-- Una de las utilidades de 'picture', 'source' e 'img'
+                        es la de asignar diferentes imágenes según las diferentes
+                        dimensiones del dispositivo utilizado.
+                    -->
+                    <picture>
+                        <source media="(min-width:900px)" srcset="../img/pic1.png">
+                        <source media="(min-width:600px)" srcset="../img/pic2.png">
+                        <source media="(min-width:300px)" srcset="../img/pic3.png">
+                        <img>
+                    </picture>
                 </div>
 
                 <div>
+                    <!-- Este contenido será graficado desde javascript. -->
                     <canvas id="imagen_canvas" width="200" height="200"></canvas>
                 </div>
                 

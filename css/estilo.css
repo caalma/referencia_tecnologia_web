@@ -63,6 +63,35 @@ main section {
     border-left: 10px solid #000;
 }
 
+fieldset {
+    margin: 20px auto;
+}
+
+fieldset > div {
+    margin: 10px auto;
+}
+
+input[type=button],
+input[type=image],
+input[type=submit],
+input[type=reset],
+button {
+    cursor: pointer;
+}
+form input[type=submit] {
+    background: #080;
+    border: none;
+    color: #fff;
+    padding: 10px;
+}
+form input[type=reset] {
+    color: #fff;
+    background: #444;
+    border: none;
+    color: #fff;
+    padding: 10px;
+}
+
 .resaltado {
     padding: 3px 5px;
     color: #fff;
@@ -83,6 +112,17 @@ main section {
     min-height: 100vh;
 }
 
+.visually-hidden {
+  border-width: 0 !important;
+  clip: rect(1px, 1px, 1px, 1px) !important;
+  height: 1px !important;
+  overflow: hidden !important;
+  padding: 0 !important;
+  position: absolute !important;
+  white-space: nowrap !important;
+  width: 1px !important;
+}
+
 #menu_general {
     background: rgba(255,255,255, .5);
     padding: 10px;
@@ -100,3 +140,5 @@ main section {
 #creditos {
     border-left: 10px solid #8f1;
 }
+
+
