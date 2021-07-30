@@ -1,0 +1,15 @@
+#!/bin/bash
+# -*- coding:utf8 -*-
+
+
+CMD='livereload'
+
+if ! command -v "$CMD" &> /dev/null
+then
+    echo "ERROR !"
+    echo "El servidor http requiere del módulo 'livereload' de python."
+    echo "Más información en https://pypi.org/project/livereload/."
+    exit
+else
+    $CMD
+fi
