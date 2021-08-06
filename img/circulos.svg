@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   sodipodi:docname="circulos.svg"
+   inkscape:version="1.0 (4035a4f, 2020-05-01)"
+   id="svg8"
+   version="1.1"
+   viewBox="0 0 264.58334 239.57959"
+   height="239.57959mm"
+   width="264.58334mm">
+  <defs
+     id="defs2" />
+  <sodipodi:namedview
+     inkscape:document-rotation="0"
+     inkscape:window-maximized="1"
+     inkscape:window-y="0"
+     inkscape:window-x="0"
+     inkscape:window-height="743"
+     inkscape:window-width="1366"
+     showgrid="false"
+     inkscape:current-layer="layer1"
+     inkscape:document-units="mm"
+     inkscape:cy="556.01031"
+     inkscape:cx="128.08865"
+     inkscape:zoom="0.3776127"
+     inkscape:pageshadow="2"
+     inkscape:pageopacity="0"
+     borderopacity="1.0"
+     bordercolor="#666666"
+     pagecolor="#d2d2d2"
+     id="base" />
+  <metadata
+     id="metadata5">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title />
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     transform="translate(197.22157,-0.75574493)"
+     id="layer1"
+     inkscape:groupmode="layer"
+     inkscape:label="Capa 1">
+    <ellipse
+       ry="71.497696"
+       rx="71.73877"
+       cy="155.49492"
+       cx="-122.4828"
+       id="circle848"
+       style="fill:none;fill-rule:evenodd;stroke:#91ff05;stroke-width:6;stroke-opacity:1;paint-order:stroke fill markers;stop-color:#000000" />
+    <ellipse
+       ry="87.691101"
+       rx="87.986763"
+       style="fill:none;fill-rule:evenodd;stroke:#f4ff05;stroke-width:10;stroke-opacity:1;paint-order:stroke fill markers;stop-color:#000000"
+       id="circle842"
+       cx="-86.266647"
+       cy="137.53401" />
+    <ellipse
+       ry="87.691101"
+       rx="87.986763"
+       cy="150.29071"
+       cx="-80.91301"
+       id="path7"
+       style="fill:none;fill-rule:evenodd;stroke:#00ff00;stroke-width:3;paint-order:stroke fill markers;stop-color:#000000" />
+    <ellipse
+       ry="87.691101"
+       rx="87.986763"
+       style="fill:none;fill-rule:evenodd;stroke:#ff0000;stroke-width:3;paint-order:stroke fill markers;stop-color:#000000"
+       id="circle9"
+       cx="-51.282803"
+       cy="140.702" />
+    <ellipse
+       ry="113.88342"
+       rx="114.26741"
+       style="fill:none;fill-rule:evenodd;stroke:#ff6600;stroke-width:1;paint-order:stroke fill markers;stop-color:#000000"
+       id="circle11"
+       cx="-58.022079"
+       cy="115.13917" />
+    <ellipse
+       ry="87.691101"
+       rx="87.986763"
+       cy="123.2505"
+       cx="-80.7201"
+       id="circle13"
+       style="fill:none;fill-rule:evenodd;stroke:#00ffff;stroke-width:3;paint-order:stroke fill markers;stop-color:#000000" />
+    <ellipse
+       ry="92.420029"
+       rx="92.731644"
+       style="fill:none;fill-rule:evenodd;stroke:#00abab;stroke-width:6;stroke-opacity:1;paint-order:stroke fill markers;stop-color:#000000"
+       id="circle15"
+       cx="-28.369869"
+       cy="144.9153" />
+    <ellipse
+       ry="87.691101"
+       rx="87.986763"
+       cy="108.16863"
+       cx="-73.099136"
+       id="circle840"
+       style="fill:none;fill-rule:evenodd;stroke:#6b00ab;stroke-width:3;stroke-opacity:1;paint-order:stroke fill markers;stop-color:#000000" />
+    <ellipse
+       ry="54.553967"
+       rx="54.737904"
+       cy="150.86337"
+       cx="-65.862411"
+       id="circle844"
+       style="fill:none;fill-rule:evenodd;stroke:#ff05c7;stroke-width:3;stroke-opacity:1;paint-order:stroke fill markers;stop-color:#000000" />
+    <ellipse
+       ry="87.691101"
+       rx="87.986763"
+       style="fill:none;fill-rule:evenodd;stroke:#ff9d05;stroke-width:3;stroke-opacity:1;paint-order:stroke fill markers;stop-color:#000000"
+       id="circle846"
+       cx="-29.818533"
+       cy="115.44742" />
+  </g>
+</svg>

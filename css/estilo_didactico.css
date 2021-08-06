@@ -1,0 +1,334 @@
+
+
+/*  Los comentarios se colocan entre rodeados 
+    entre signos de barra diagonal ascendente'/' junto 
+    al asterisco '*' como en este caso. 
+*/
+
+/*  Este documento debe ser leido junto con el archivo 
+    html 'paginas/css.html'. 
+    Se recomienda hacerlo desde un editor de código
+    con resaltado de sintaxis. 
+
+*/
+
+/*  Las reglas en CSS se componen de uno o más 'selectores'
+    a los que le sigue un bloque entre llaves '{  }', con una
+    lista de una o más propiedades y valores asociados. 
+    Cada propiedad se separa de su propio valor con el signo dos 
+    puntos ':', y de la siguiente propiedad con el signo punto
+    y coma ';'.
+
+    selector { propiedad: valor;  }
+    selector1, selecor2 {
+        propiedad1: valor_1;
+        propiedad2: valor_2a valor_2b valor_2c;
+    }    
+*/
+
+/*  Los tipos de selectores disponibles son, mediante: 
+    + etiqueta
+    + id
+    + clase
+    + atributo
+    + relacion
+    + estado
+*/
+
+
+/*  SELECTOR por ETIQUETA 
+    dando el nombre del tag/etiqueta html
+*/
+
+* {
+    box-sizing: content-box;
+    font-family: 'Rubik', sans-serif;
+}
+
+body {
+    font-size: 16px;
+}
+
+h1 { 
+    color: #fff;
+    text-shadow: 0 0 10px rgba(0, 0, 100, 0.9);
+    text-align: center;
+    font-size: 3em;
+    padding: 10px;
+    margin: 0;
+}
+h2 > *,
+h2 {
+    font-family: 'Permanent Marker', cursive;
+    letter-spacing: .05em;
+}
+
+li {
+    margin: 5px;
+    padding: 5px;
+    border-bottom: 1px solid hsl(0, 0%, 75%);
+}
+
+ul {
+    padding: 0;
+    margin: 0;
+}
+
+ol {
+    padding: 10px;
+}
+footer {
+    box-shadow: -10px 0 50px rgba(0, 0, 0, 0.5);
+}
+
+/*  SELECTOR por ID  
+    El 'id' es el atributo asignado a algún tag html.
+    Este atributo por definición debe ser único dentro
+    de toda la página. Aunque desde css no de conflictos,
+    si los dará al aprovechar sus características desde
+    html o javascript.
+    Se llama utilizando el signo de cardinal # como prefijo
+    al 'id'.
+*/
+
+#inicio {
+    display: block;
+    border-top: 5px solid #45f;
+}
+
+
+/*  SELECTOR por CLASE 
+    La clase, responde a el atributo 'class' agregado 
+    a cualquier tag. Es especialmente util para definir
+    estilos genérico, que puedan ser aplicados sobre
+    distintos tags.
+    Se indica utilizando el signo punto '.' como prefijo
+    del nombre de la clase asignado en el tag.
+*/
+
+.fondo_textura {
+    background-image: url(../img/textura.png);
+    background-repeat: repeat;
+}
+.fondo_gradacion {
+    background-image: linear-gradient(to bottom right, #0052b0, #b340b3); 
+}
+.centrar {
+    text-align: center;
+}
+.centrar > * {
+    margin-left: auto;
+    margin-right: auto;
+}
+.nota {
+    margin: 3vw;
+    border: 1px dashed #333;
+    padding: 20px;
+    background: #fff;
+    border-radius: 10px;
+    text-align: center;
+}
+.nota.importante {
+    background: #bf8;
+}
+.en_tarjetas {
+    display: flex;
+    flex-flow: row wrap;
+}
+.en_tarjetas > div {
+    margin: 10px;
+    border: 1px solid #ccc;
+    padding: 10px 20px 30px;
+    border-radius: 3px;
+    width: 24%;
+    overflow: hidden;
+}
+.en_2_columnas {
+    columns: 2 auto;
+}
+
+.galeria img {
+    width: 400px;
+    max-width: 100%;
+}
+.estilo_etiqueta li {
+    padding: 6px 10px;
+    margin: 3px;
+    display: inline-block;
+    background: #bbb;
+    color: #000;
+}
+
+/*  SELECTOR por ATRIBUTO 
+    Aquí podemos además de verificar que un tag disponga
+    de un determinado atributo, comparar la totalidad
+    o partes del valor del atributo
+*/
+
+[href] {
+    color: #a0f;
+}
+[href^='#'] {
+    font-family: monospace;
+}
+[href$='css']::after {
+    content: 'CSS';
+    font-weight: bold;
+    font-size: .6em;
+    padding: 3px 6px;
+    border-radius: 5px;
+    background: #333;
+    color: #ddd;
+    margin: 0 10px 0 5px;
+    text-decoration: none;
+}
+
+
+/*  SELECTOR por RELACIÓN 
+    En este caso lo que estamos indicando es una relación
+    de pertenencia, donde el tag a seleccionar es el ubicado
+    más a la derecha, pero que mantiene algún tipo de relación
+    (inclusión, siguiente, ...) con los predecesores.
+    */
+
+article section {
+    /* Este estilo se aplica a todos los tag 'section'
+    que estén dentro de un tag 'article' */
+    background: #fff;
+    margin: 10px 20px;
+    padding: 40px;
+}
+
+ol li {
+    list-style-type: lower-roman;
+}
+
+ul li {
+    list-style: none;
+}
+
+ul li.principal {
+    border-right: 10px solid rgba(0,255,0, .4);
+}
+
+a * {
+    /*  El asterisco '*' como selector indica que se seleccionarán
+        todos los elementos. En este caso todos los elementos
+        que estén dentro de un 'a'.
+        El valor 'inherit' para la propiedad 'color' indica especifica
+        que el elemento tome el color del elemento padre o contenedor.
+    */
+    color: inherit;
+}
+a i {
+    text-transform: uppercase;
+    font-size: small;
+    background: #ff7;
+    padding: 3px 7px;
+}
+
+/*  SELECTOR por ESTADO 
+    Los estados son situaciones de iteracción con los elementos 
+    de la página. Por ejemplo: pasar sobre, seleccionar, 
+    cambiar a modo pantalla completa, ...
+    Estos estados se indican con una nomenclatura llamada
+    pseudo-clases que se indican con el signo dos puntos ':'
+    como posfijo del selector y a continuación la clave de estado.
+*/
+
+a:hover {
+    background: rgba(150, 150, 0, 0.2);
+}
+
+ol li::selection,
+ol li ::selection {
+    /*  Esto cambia el estilo del texto cuando
+        se lo selecciona, solamente para los 'li' que
+        anidados en un 'ol'.
+     */
+    background: #f66;
+}
+
+:fullscreen article {
+    background-color: #fe3;
+}
+
+/*  También pueden definirse reglas que se aplican sólo
+    al utilizarse algún dispositivo específico, o que
+    tenga determinadas dimensiones. 
+*/
+
+@media only screen and (max-width: 600px) {
+    .en_2_columnas {
+        /*  Aquí conseguimos que los elementos que se muestren en
+            dos columnas normalmente, cuando las dimensiones de
+            la navegador son menores a 600px, pasen a mostrarse
+            en una sola columna.
+        */
+        columns: 1 auto;
+    }
+    .en_tarjetas {
+        flex-flow: column;
+    }
+    .en_tarjetas > div {
+        width: auto;
+    }
+}
+
+/*  Todos los tipos de selectores son combinables, 
+    ampliando la expresividad que podemos lograr
+    para aplicar los estilos.
+    En este caso además utilizando las propiedades 
+    'transition' y 'filter', conseguimos dar 
+    cierta dinámica a los elementos de la página.
+*/
+.efecto_desenfoque,
+.efecto_grisado {
+    transition: 1s filter;
+}
+.efecto_desenfoque:hover {
+    filter: blur(1.5rem);
+}
+.efecto_grisado:hover {
+    filter: grayscale(100%);
+}
+
+
+
+/*  Reglas CSS para las UTILIDADES. 
+    Normalemnte los bloques de reglas se agrupan
+    por tipo de contenido.
+*/
+
+#utilidades {
+    position: fixed;
+    right: 10px;
+    top: 0;
+    width: auto;
+    overflow: hidden;
+    padding: 10px;
+    text-align: right;
+}
+#utilidades button {
+    background: #444;
+    border-radius: 8px;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    transition: .5s all;
+}
+#utilidades button:hover {
+    background: #888;
+}
+#utilidades button i {
+    color: #fff;
+}
+#conmutar_fullscreen .fa-window-restore,
+:fullscreen #conmutar_fullscreen .fa-window-maximize {
+    display: none;
+}
+#conmutar_fullscreen .fa-window-maximize,
+:fullscreen #conmutar_fullscreen .fa-window-restore {
+    display: block;
+}
+
