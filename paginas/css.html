@@ -13,6 +13,27 @@
     
     <link rel="stylesheet" type="text/css" href="../css/normalize.css">
     <link rel="stylesheet" type="text/css" href="../css/estilo.css">
+    
+    <!-- 
+        Este documentos es el que incluye las referencias
+        y comentarios de los estilos.
+    -->
+    <link rel="stylesheet" type="text/css" href="../css/estilo_didactico.css">
+
+    <!-- 
+        Incluimos las reglas css para el funcionamiento 
+        de los íconos de FontAwesome
+    -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <!--
+        Cargamos las tipografías externas que necesitemos.
+        En este caso utilizamos las disponibles desde
+    -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Permanent+Marker&family=Rubik:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&display=swap" rel="stylesheet">
+
 
     <title>RTW: CSS</title>
 
@@ -23,18 +44,380 @@
         <header>
             <h1>CSS</h1>
         </header>
-        <article>
+        <article class="fondo_textura">
+            <p class="nota importante">
+                Este documento debe ser leido junto con el archivo html <a href="../css/estilo_didactico.css" target="_blank">css/estilo_didactico.css</a>.
+            </p> 
+
             <section>
-                <h2>(Próximamente)</h2>
-            </section>                
+                <h2>Referencias online sobre CSS</h2>
+                <div class="en_tarjetas">
+                    <div>
+                        <h3>Selectores</h3>
+                        <ul>
+                            <li><a href="https://www.w3schools.com/cssref/css_selectors.asp">Lista completa <i>w3schools</i></a></li>
+                        </ul>
+                    </div> 
+                    <div>
+                        <h3>Propiedades</h3>
+                        <ul>
+                            <li><a href="https://way2tutorial.com/css/properties/groupwise.php">Propiedades agrupadas <i>way2tutorial</i></a></li>
+                            <li><a href="https://www.w3schools.com/cssref/default.asp">Referencia completa <i>w3schools</i></a></li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h3>Unidades de medida</h3>
+                        <ul>
+                            <li><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Values_and_Units">Valores y unidades - 1 <i>mozilla</i></a></li>
+                            <li><a href="https://developer.mozilla.org/en-US/docs/Learn/CSS/Building_blocks/Values_and_units">Valores y unidades - 2 <i>mozilla</i></a></li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h3>Dispositivos</h3>
+                        <ul>
+                            <li><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/Layout_cookbook/Media_objects">Media Objects <i>mozilla</i></a></li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h3>Funciones / variables</h3>
+                        <ul>
+                            <li><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Functions">Funciones <i>mozilla</i></a></li>
+                            <li><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/filter-function">Filtros <i>mozilla</i></a></li>
+                            <li><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Variables">Variables <i>mozilla</i></a></li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h3>Transiciones / Animaciones</h3>
+                        <ul>
+                            <li><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Transitions/Using_CSS_transitions">Transiciones <i>mozilla</i></a></li>
+                            <li><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Animations/Using_CSS_animations">Animaciones <i>mozilla</i></a></li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+
+            <section>
+                <h2>Herramientas online</h2>
+                <div class="en_2_columnas">
+                    <div>
+                        <h3>Bordes</h3>
+                        <ul>
+                            <li class="principal"><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Background_and_Borders/Box-shadow_generator">Generador de Box-shadow <i>mozilla</i></a></li>
+                            <li><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Background_and_Borders/Border-image_generator">Generador Border-image <i>mozilla</i></a></li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h3>Tipografía</h3>
+                        <ul>
+                            <li><a href="https://sparanoid.com/lab/opentype-features/#cpsp">Visualizador de nuevas propiedades tipograficas</a></li>
+                            <li><a href="https://wakamaifondue.com/">Muestra información técnica de una tipografía que le asignemos</a></li>
+                            <li><a href="https://www.axis-praxis.org/specimens/__DEFAULT__">Visualizador de tipografías en contexto</a></li>
+                            <li><a href="https://v-fonts.com/">https://v-fonts.com/</a></li>
+                            <li class="principal"><a href="https://play.typedetail.com/">Probador de estilos</a></li>
+                        </ul>                    
+                    </div>
+                    <div>
+                        <h3>Colores</h3>
+                        <ul>
+                            <li><a href="https://html-color.codes/">Lista de colores</a></li>
+                            <li><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Colors/Color_picker_tool">Selector de color</a></li>
+                            <li class="principal"><a href="https://www.w3schools.com/colors/colors_converter.asp">Conversor de nomenclaturas de color<i>w3schools</i></a></li>
+                            <li><a href="https://www.paletton.com/">Generador de paletas</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+
+            <section class="fondo_gradacion">
+                <div class="galeria centrar">
+                    <img class="efecto_grisado" src="../img/circulos.svg">
+                    <img class="efecto_desenfoque" src="../img/transparencias.png">
+                </div>
+            </section>
+
+            <section class="en_2_columnas">
+                <div>
+                    <h2>Tipos de selectores disponibles</h2>
+                    <ol>
+                        <li>por <strong>etiqueta</strong></li>
+                        <li>por <strong>id</strong></li>
+                        <li>por <strong>clase</strong></li>
+                        <li>por <strong>atributo</strong></li>
+                        <li>por <strong>relación</strong></li>
+                        <li>por <strong>estado</strong></li>
+                    </ol>   
+                </div>
+                <div>
+                    <h2>Lista <small>no exhaustiva</small> de propiedades</h2>
+                    <ul class="estilo_etiqueta">
+                        <li>align-content</li>
+                        <li>align-items</li>
+                        <li>align-self</li>
+                        <li>all</li>
+                        <li>animation</li>
+                        <li>animation-delay</li>
+                        <li>animation-direction</li>
+                        <li>animation-duration</li>
+                        <li>animation-fill-mode</li>
+                        <li>animation-iteration-count</li>
+                        <li>animation-name</li>
+                        <li>animation-play-state</li>
+                        <li>animation-timing-function</li>
+                        <li>backface-visibility</li>
+                        <li>background</li>
+                        <li>background-attachment</li>
+                        <li>background-blend-mode</li>
+                        <li>background-clip</li>
+                        <li>background-color</li>
+                        <li>background-image</li>
+                        <li>background-origin</li>
+                        <li>background-position</li>
+                        <li>background-repeat</li>
+                        <li>background-size</li>
+                        <li>border</li>
+                        <li>border-bottom</li>
+                        <li>border-bottom-color</li>
+                        <li>border-bottom-left-radius</li>
+                        <li>border-bottom-right-radius</li>
+                        <li>border-bottom-style</li>
+                        <li>border-bottom-width</li>
+                        <li>border-collapse</li>
+                        <li>border-color</li>
+                        <li>border-image</li>
+                        <li>border-image-outset</li>
+                        <li>border-image-repeat</li>
+                        <li>border-image-slice</li>
+                        <li>border-image-source</li>
+                        <li>border-image-width</li>
+                        <li>border-left</li>
+                        <li>border-left-color</li>
+                        <li>border-left-style</li>
+                        <li>border-left-width</li>
+                        <li>border-radius</li>
+                        <li>border-right</li>
+                        <li>border-right-color</li>
+                        <li>border-right-style</li>
+                        <li>border-right-width</li>
+                        <li>border-spacing</li>
+                        <li>border-style</li>
+                        <li>border-top</li>
+                        <li>border-top-color</li>
+                        <li>border-top-left-radius</li>
+                        <li>border-top-right-radius</li>
+                        <li>border-top-style</li>
+                        <li>border-top-width</li>
+                        <li>border-width</li>
+                        <li>bottom</li>
+                        <li>box-decoration-break</li>
+                        <li>box-shadow</li>
+                        <li>box-sizing</li>
+                        <li>break-after</li>
+                        <li>break-before</li>
+                        <li>break-inside</li>
+                        <li>caption-side</li>
+                        <li>caret-color</li>
+                        <li>clear</li>
+                        <li>clip</li>
+                        <li>clip-path</li>
+                        <li>color</li>
+                        <li>column-count</li>
+                        <li>column-fill</li>
+                        <li>column-gap</li>
+                        <li>column-rule</li>
+                        <li>column-rule-color</li>
+                        <li>column-rule-style</li>
+                        <li>column-rule-width</li>
+                        <li>column-span</li>
+                        <li>column-width</li>
+                        <li>columns</li>
+                        <li>content</li>
+                        <li>counter-increment</li>
+                        <li>counter-reset</li>
+                        <li>cursor</li>
+                        <li>direction</li>
+                        <li>display</li>
+                        <li>empty-cells</li>
+                        <li>filter</li>
+                        <li>flex</li>
+                        <li>flex-basis</li>
+                        <li>flex-direction</li>
+                        <li>flex-flow</li>
+                        <li>flex-grow</li>
+                        <li>flex-shrink</li>
+                        <li>flex-wrap</li>
+                        <li>float</li>
+                        <li>font</li>
+                        <li>font-family</li>
+                        <li>font-feature-settings</li>
+                        <li>font-kerning</li>
+                        <li>font-size</li>
+                        <li>font-size-adjust</li>
+                        <li>font-stretch</li>
+                        <li>font-style</li>
+                        <li>font-variant</li>
+                        <li>font-variant-caps</li>
+                        <li>font-weight</li>
+                        <li>gap</li>
+                        <li>grid</li>
+                        <li>grid-area</li>
+                        <li>grid-auto-columns</li>
+                        <li>grid-auto-flow</li>
+                        <li>grid-auto-rows</li>
+                        <li>grid-column</li>
+                        <li>grid-column-end</li>
+                        <li>grid-column-gap</li>
+                        <li>grid-column-start</li>
+                        <li>grid-gap</li>
+                        <li>grid-row</li>
+                        <li>grid-row-end</li>
+                        <li>grid-row-gap</li>
+                        <li>grid-row-start</li>
+                        <li>grid-template</li>
+                        <li>grid-template-areas</li>
+                        <li>grid-template-columns</li>
+                        <li>grid-template-rows</li>
+                        <li>hanging-punctuation</li>
+                        <li>height</li>
+                        <li>hyphens</li>
+                        <li>isolation</li>
+                        <li>justify-content</li>
+                        <li>left</li>
+                        <li>letter-spacing</li>
+                        <li>line-height</li>
+                        <li>list-style</li>
+                        <li>list-style-image</li>
+                        <li>list-style-position</li>
+                        <li>list-style-type</li>
+                        <li>margin</li>
+                        <li>margin-bottom</li>
+                        <li>margin-left</li>
+                        <li>margin-right</li>
+                        <li>margin-top</li>
+                        <li>max-height</li>
+                        <li>max-width</li>
+                        <li>min-height</li>
+                        <li>min-width</li>
+                        <li>mix-blend-mode</li>
+                        <li>object-fit</li>
+                        <li>object-position</li>
+                        <li>opacity</li>
+                        <li>order</li>
+                        <li>outline</li>
+                        <li>outline-color</li>
+                        <li>outline-offset</li>
+                        <li>outline-style</li>
+                        <li>outline-width</li>
+                        <li>overflow</li>
+                        <li>overflow-x</li>
+                        <li>overflow-y</li>
+                        <li>padding</li>
+                        <li>padding-bottom</li>
+                        <li>padding-left</li>
+                        <li>padding-right</li>
+                        <li>padding-top</li>
+                        <li>page-break-after</li>
+                        <li>page-break-before</li>
+                        <li>page-break-inside</li>
+                        <li>perspective</li>
+                        <li>perspective-origin</li>
+                        <li>pointer-events</li>
+                        <li>position</li>
+                        <li>quotes</li>
+                        <li>resize</li>
+                        <li>right</li>
+                        <li>row-gap</li>
+                        <li>scroll-behavior</li>
+                        <li>tab-size</li>
+                        <li>table-layout</li>
+                        <li>text-align</li>
+                        <li>text-align-last</li>
+                        <li>text-decoration</li>
+                        <li>text-decoration-color</li>
+                        <li>text-decoration-line</li>
+                        <li>text-decoration-style</li>
+                        <li>text-indent</li>
+                        <li>text-justify</li>
+                        <li>text-overflow</li>
+                        <li>text-shadow</li>
+                        <li>text-transform</li>
+                        <li>top</li>
+                        <li>transform</li>
+                        <li>transform-origin</li>
+                        <li>transform-style</li>
+                        <li>transition</li>
+                        <li>transition-delay</li>
+                        <li>transition-duration</li>
+                        <li>transition-property</li>
+                        <li>transition-timing-function</li>
+                        <li>unicode-bidi</li>
+                        <li>user-select</li>
+                        <li>vertical-align</li>
+                        <li>visibility</li>
+                        <li>white-space</li>
+                        <li>width</li>
+                        <li>word-break</li>
+                        <li>word-spacing</li>
+                        <li>word-wrap</li>
+                        <li>writing-mode</li>
+                        <li>z-index</li>
+                    </ul>
+                    <p>Una lista completa puede encontrarse 
+                        <a href="https://www.w3.org/Style/CSS/all-properties.en.html" target="_blank">aquí</a>.
+                    </p>
+                </div>
+            </section>
+
         </article>
-        <footer>
+
+        <footer class="fondo_textura">
              <nav>
                 <a href="../index.html">portada</a>
                 ·
                 <a href="#inicio">inicio</a>
             </nav>                
         </footer>
+
     </div>
+
+    <div id="utilidades">
+        <button id="conmutar_fullscreen" title="Conmutar pantalla completa">
+            <i class="fa fa-window-maximize"></i>
+            <i class="fa fa-window-restore"></i>
+        </button>
+    </div>
+
+    <script>
+        function openFullscreen(){
+          if(el.requestFullscreen){
+            el.requestFullscreen();
+          } else if(el.webkitRequestFullscreen){
+            el.webkitRequestFullscreen();
+          } else if(el.msRequestFullscreen){
+            el.msRequestFullscreen();
+          }
+        }
+
+        function closeFullscreen(){
+          if(document.exitFullscreen){
+            document.exitFullscreen();
+          }else if(document.webkitExitFullscreen){
+            document.webkitExitFullscreen();
+          }else if(document.msExitFullscreen){
+            document.msExitFullscreen();
+          }
+        }
+
+        var el = document.documentElement;
+        var btn_fullscreen = document.getElementById('conmutar_fullscreen');
+        var estado_fullscreen = false;
+        btn_fullscreen.onclick = function(){
+            if(estado_fullscreen){
+                closeFullscreen();
+            }else{
+                openFullscreen();
+            }
+            estado_fullscreen = ! estado_fullscreen;
+        }        
+    </script>
 </body>
 </html>
