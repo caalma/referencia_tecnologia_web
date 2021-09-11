@@ -120,17 +120,6 @@ footer {
     margin-left: auto;
     margin-right: auto;
 }
-.nota {
-    margin: 3vw;
-    border: 1px dashed #333;
-    padding: 20px;
-    background: #fff;
-    border-radius: 10px;
-    text-align: center;
-}
-.nota.importante {
-    background: #bf8;
-}
 .en_tarjetas {
     display: flex;
     flex-flow: row wrap;

@@ -123,6 +123,18 @@ form input[type=reset] {
   width: 1px !important;
 }
 
+.nota {
+    margin: 3vw;
+    border: 1px dashed #333;
+    padding: 20px;
+    background: #fff;
+    border-radius: 10px;
+    text-align: center;
+}
+.nota.importante {
+    background: #bf8;
+}
+
 #menu_general {
     background: rgba(255,255,255, .5);
     padding: 10px;

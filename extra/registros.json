@@ -1,0 +1,6 @@
+[ 
+    {"nombre": "Carlos", "email": "carlos@email.ar", "pasatiempo": "juegos de mesa"},
+    {"nombre": "Catalina", "email": "catalina@email.ar", "pasatiempo": "cerámica"},
+    {"nombre": "Marisa", "email": "marisa@email.ar", "pasatiempo": "criar aves"},
+    {"nombre": "José", "email": "jose@email.ar", "pasatiempo": "andar en bicicleta"}
+]

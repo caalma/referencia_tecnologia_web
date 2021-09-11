@@ -10,9 +10,41 @@
     <meta name="handheldfriendly" content="true">
 
     <link rel="alternate icon" type="image/png" href="../img/favicon.png">
-    
+
     <link rel="stylesheet" type="text/css" href="../css/normalize.css">
     <link rel="stylesheet" type="text/css" href="../css/estilo.css">
+    <link rel="stylesheet" type="text/css" href="../css/estilo_extra-javascript.css">
+    
+
+    <!-- 
+        Para insertar un bloque javascript dentro del documento html
+        se utiliza el tag `script`, y dentro de el se coloca el código 
+        a ejecutar.
+
+        Si bien es válido hacer estas inserciones de código, no es lo 
+        más recomendable durante el desarrollo de una página que irá a
+        producción.
+
+        Es generalmente más útil para probar funcionalidades en la 
+        etapa de desarrollo que luego serán pasadas a un archivo `.js`
+        independiente.
+
+        Los bloques `script` pueden insertarse en cualquier parte del
+        código html, pero su ejecución suele cortar el flujo de carga
+        y muestra de la página completa html. Por eso, ya sea bloques
+        insertados o llamadas por referencia a archivos javascript, se
+        aconseja que se hagan al final del documento. No como en el 
+        bloque script que sigue a este comentario ubicado en el `head`.
+    -->
+    <script>
+        /*  En caso de querer visualizar este alerta cambiar el valor
+            de la siguiente variable por: true.
+        */
+        var mostrar_alerta_inicio = false;
+        if (mostrar_alerta_inicio) {
+            alert("Alerta al INICIO !");
+        }
+    </script>
 
     <title>RTW: Javascript</title>
 
@@ -24,9 +56,73 @@
             <h1>Javascript</h1>
         </header>
         <article>
+            <p class="nota importante">
+                Este documento debe ser leido junto con el archivo JAVASCRIPT <a href="../js/init-pag_javascript.js" target="_blank">js/init-pag_javascript.js</a>
+                y el código HTML del <a href="./javascript.html" target="_blank">actual documento</a>.
+            </p> 
+            <!--
+                El siguiente tag `section` contiene la funcionalidad de un botón 
+                que redirecciona a un enlace, aplicadas desde Javascript aprovechando
+                los atributos "name" y "url".
+            -->
+            <section id="presentacion" name="botonJS" url="https://www.w3.org/standards/webdesign/script" class="oculto">
+                <p>
+                    <strong id="titulo">Javascript</strong>
+                    <em id="definicion"></em>    
+                </p>
+                <p>Que posee:</p>
+                <ul name="lista"></ul>
+            </section>
+
+            <section id="botones" class="oculto">
+                <p>Algunos botones para utilidades de visualización:</p>
+                <div>
+                    <button name="entrar_a_fullscreen">Pantalla Completa</button>
+                    <button name="salir_de_fullscreen">Pantalla Normal</button>
+                </div>
+            </section>
+
+            <section id="formulario" class="oculto">
+                <form id="form_contacto" action="/" method="get" target="self" autocomplete="off">
+                    <div>
+                        <label for="email">Email</label>
+                        <input type="email" name="email" id="email" required>
+                        <input type="submit" value="Enviar">
+                    </div>
+                    <br>
+                    <div id="respuesta" class="centrar"></div>
+                </form>
+            </section>
+
+            <section id="multimedia" class="oculto">
+                <div>
+                    <audio name="test" controls>
+                        <source src="../audio-video/ejemplo.ogg" type="audio/ogg">
+                    </audio>
+                </div>
+                <div>
+                    <div>
+                        <video name="test" width="320" height="240">
+                            <source src="../audio-video/ejemplo.mp4" type="video/mp4">
+                        </video>
+                    </div>
+                    <div>
+                        <button id="reproducir_video">Play/Pause</button>
+                    </div>
+                </div>
+            </section>
+
             <section>
-                <h2>(Próximamente)</h2>
-            </section>                 
+              <h2>Algunos recursos online donde ampliar datos</h2>
+              <ul>
+                <li><a href="https://www.w3.org/standards/webdesign/script">w3</a></li>
+                <li><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript">mozilla</a></li>
+                <li><a href="https://aprendejavascript.org/">aprendejavascript</a></li>
+                <li><a href="https://www.w3schools.com/js/default.asp">w3schools</a></li>
+                <li><a href="https://jquery.com/">jquery</a></li>
+              </ul>
+            </section>
+
         </article>
         <footer>
              <nav>
@@ -36,5 +132,36 @@
             </nav>                
         </footer>
     </div>
+  
+
+    <!-- 
+        Este es el modo correcto de cargar los documentos javascript.
+        Utilizando el tag `script` y aplicando al atributo src (abreviación
+        de la palabra "source" que en inglés significa "fuente" u "origen").
+        Los siguientes tags llaman a :
+        1 - Librería JQuery, que simplifica la manipulación de el DOM, y
+            ofrece adaptaciones a las condiciones de entorno de varios tipos
+            de navegadores web.
+        2 - Las funcionalidades específicas que nosotros programamos para 
+            nuestra página.
+    -->
+    <script src="../js/jquery-3.6.0.min.js"></script>
+    <script src="../js/init-pag_javascript.js"></script>
+
+    <!--
+        El siguiente bloque, al igual que el del inicio, es práctico,
+        para usos de pruebas en la etapa de desarrollo, pero las funcionalidades
+        alojadas allí deberán transladarse a documentos javascript específicos
+        cuando la página esté finalizada.
+        El atributo `type` aplicado en el siguiente tag, actualmente es opcional,
+        no generando ningún efecto secundario sobre la ejecución del código, si 
+        sucede que no se lo aplica.
+    -->
+    <script type="text/javascript">
+        var mostrar_alerta_final = false;
+        if (mostrar_alerta_final) {
+            alert("Alerta al FINAL !");
+        }
+    </script>
 </body>
 </html>

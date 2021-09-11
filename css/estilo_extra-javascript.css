@@ -1,0 +1,77 @@
+
+header {
+  background-color: #333;
+  color: #fff;
+  text-align: center;
+}
+header * {
+  font-size: 1.9em;
+  color: inherit;
+}
+
+article {
+  background: #795d3a;
+}
+
+section {
+  margin: 10px;
+  padding: 30px;
+  background-color: #ccc;
+}
+
+input[type=submit],
+button {
+  color: #333;
+  padding: 3px 8px;
+  font-size: 1em;
+  cursor: pointer;
+}
+
+input[type=submit]:hover,
+button:hover {
+  box-shadow: 0 0 10px rgba(0, 0, 0, .3);
+}
+
+input {
+  font-size: 1em;
+  color: #333;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+}
+input[required] {
+  border-right: 3px #a00 solid;
+}
+
+form div {
+  margin: 5px 0;
+}
+
+.rojo {
+  color: #a00;
+}
+.grande {
+  font-size: 2em;
+}
+.oculto {
+  display: none;
+}
+.centrar {
+  text-align: center;
+}
+.centrar * {
+  margin-left: auto;
+  margin-right: auto;
+}
+.error {
+  color: #a00;
+}
+
+[name=botonJS] {
+  border: 5px dashed transparent;
+  cursor: pointer;
+}
+
+[name=botonJS]:hover {
+  border-color: #5a0;
+}
